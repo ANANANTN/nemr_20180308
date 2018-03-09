@@ -3,7 +3,7 @@
   "version": "",
   "engines": {
     "node": "8.1.1",
-    "npm": "5.6.0"
+    "npm": "5.7.1"
   },
   "scripts": {
     "start": "PORT=5000 && node index.js"
