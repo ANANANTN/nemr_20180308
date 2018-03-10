@@ -1,5 +1,6 @@
 {
-  "name": "",
+  "name": "Emaily",
+  "description": "A simple email campaign service website.",
   "version": "",
   "engines": {
     "node": "8.1.1",
@@ -9,6 +10,8 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0"
   }
 }
