@@ -4,6 +4,17 @@ const mongoose = require('mongoose');
 const keys = require('../config/keys');
 
 const User = mongoose.model('users');
+// When using sessions passport will use serializeUser & deserializeUser for
+// setting and retrieving coockies.
+passport.serializeUser((user, done) => {
+  done(null, user.id);
+});
+
+passport.deserializeUser((id, done) => {
+  User.findById(id).then(user => {
+    done(null, user);
+  });
+});
 
 // new GoogleStrategy() // creates a new instance of the Google GoogleStrategy
 // passport.use(...) // Tells passport that a strategy is available (in this
