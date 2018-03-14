@@ -63,4 +63,4 @@ typings/
 # personal notes about the project.
 notes.txt
 
-./config/keys.js
+config/dev.js
