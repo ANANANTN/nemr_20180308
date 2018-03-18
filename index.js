@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
   res.send('<div>Go to <a href="./auth/google">/auth/google.</a></div>');
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = new Number(process.env.PORT) + 1 || 5000;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}.`);
 });

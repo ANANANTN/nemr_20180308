@@ -16,6 +16,10 @@ module.exports = app => {
   });
 
   app.get('/api/current_user', (req, res) => {
-    res.send(req.user);
+    if (req.user != null) {
+      res.send(req.user);
+    } else {
+      res.send('You are not logged in.');
+    }
   });
 };
