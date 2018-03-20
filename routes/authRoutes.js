@@ -1,6 +1,6 @@
 const passport = require('passport');
 
-module.exports = app => {
+module.exports = (app) => {
   app.get(
     '/auth/google',
     passport.authenticate('google', {
@@ -16,10 +16,10 @@ module.exports = app => {
   });
 
   app.get('/api/current_user', (req, res) => {
-    if (req.user != null) {
-      res.send(req.user);
-    } else {
-      res.send('You are not logged in.');
+    if (req.user == null) {
+      console.log('No user is currently logged in.');
     }
+
+    res.send(req.user);
   });
 };
