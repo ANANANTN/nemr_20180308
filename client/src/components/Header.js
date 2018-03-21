@@ -7,9 +7,13 @@ class Header extends Component {
       case null:
         return <li>Still waiting.</li>;
       case false:
-        return <li>Login with Google</li>;
+        return (
+          <li>
+            <a href="/auth/google">Login with Google</a>
+          </li>
+        );
       default:
-        return <li>Logged In</li>;
+        return <li onClick={() => console.log('Logout.')}>Logout</li>;
     }
   }
 

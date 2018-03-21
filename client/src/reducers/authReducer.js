@@ -1,4 +1,3 @@
-import Redux from 'redux';
 import { FETCH_USER } from '../actions/types';
 
 export default (state = null, action) => {
